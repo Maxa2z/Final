@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- <link rel="stylesheet" href="./assets/css/dashboard.css" /> -->
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/">LearnX</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/login" class="btn-login">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="dashboard-section">
+      <h2>Welcome to your Dashboard, #{user}</h2>
+
+      <div class="profile-info">
+        <h3>Your Profile</h3>
+        <p><strong>Name:</strong> #{user}</p>
+        <p><strong>Email:</strong> #{id}</p>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <h2>weather data, #{user}</h2>
+
+      <div class="profile-info">
+        <h3>Your Profile</h3>
+        <p><strong>Name:</strong> #{user}</p>
+        <p><strong>Email:</strong> #{id}</p>
+      </div>
+    </section>
+
+    <section class="dashboard-section">
+      <h2>Welcome to your Dashboard, #{user}</h2>
+
+      <div class="profile-info">
+        <h3>Your Profile</h3>
+        <p><strong>Name:</strong> #{user}</p>
+        <p><strong>Email:</strong> #{id}</p>
+      </div>
+    </section>
+
+    <section id="courses" class="courses-section">
+      <h2>Your Courses</h2>
+      <div class="courses-container">
+        <div class="course-card">
+          <img src="images/course1.jpg" alt="Course 1" />
+          <h3>Web Development</h3>
+          <p>Learn HTML, CSS, and JavaScript to build modern websites.</p>
+        </div>
+        <div class="course-card">
+          <img src="images/course2.jpg" alt="Course 2" />
+          <h3>Data Science</h3>
+          <p>Master Python, R, and Machine Learning for Data Analysis.</p>
+        </div>
+        <div class="course-card">
+          <img src="images/course3.jpg" alt="Course 3" />
+          <h3>Graphic Design</h3>
+          <p>
+            Unleash your creativity with design tools like Photoshop and
+            Illustrator.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

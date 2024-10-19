@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/loginStyles.css" />
+    //- <script defer src="./assets/js/script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">LearnX</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login.html" class="btn-login">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Login Form -->
+    <div id="login-container">
+      <section class="login-section">
+        <h2>Login</h2>
+        <form id="loginForm" action="/login_in" method="post">
+          <label for="login-email">Email:</label>
+          <!-- required type="email" -->
+          <input type="email" id="login-email" name="id"  />
+
+          <label for="login-password">Password:</label>
+          <!-- required minlength="6"  -->
+          <input type="password" id="login-password" name="password" />
+
+          <button type="submit">Login</button>
+
+          <div id="login-error">#{error}</div>
+        </form>
+        <p>
+          <a style="color: blue" href="/register">Register Here</a>
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
