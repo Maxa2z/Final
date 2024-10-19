@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./assets/css/loginStyles.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    //- <script defer src="./assets/js/script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">LearnX</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/login" class="btn-login">Login</a></li>
+      </ul>
+    </nav>
+    <!-- Registration Form -->
+    <div id="register-container">
+      <section class="register-section">
+        <h2>Register</h2>
+        <form id="registerForm" action="/register_in" method="post">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="register-email">Email:</label>
+          <input type="email" id="register-email" name="email" />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" />
+
+          <button type="submit">Register</button>
+
+          <div id="register-error"></div>
+        </form>
+        <p>Already have an account? <a href="login.html">Login Here</a></p>
+      </section>
+    </div>
+  </body>
+</html>
