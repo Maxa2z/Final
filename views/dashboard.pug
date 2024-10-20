@@ -17,7 +17,10 @@
           <li><a href="/">Home</a></li>
           <li><a href="#courses">Courses</a></li>
           <li><a href="/about">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Contact</a></li> 
+          //- send id With href
+          <li><a href="/Edit/#{id}" class="btn-login">Edit Account</a></li>
+          <li><a href="/Delete/#{id}" class="btn-login">Delete Account</a></li>
           <li><a href="/login" class="btn-login">Logout</a></li>
         </ul>
       </nav>
@@ -31,27 +34,29 @@
         <p><strong>Name:</strong> #{user}</p>
         <p><strong>Email:</strong> #{id}</p>
       </div>
+      <a href="/Weather" class="btn-login">Weather</a>
+      <a href="/Currency" class="btn-login">Currency</a>
     </section>
 
-    <section class="dashboard-section">
-      <h2>weather data, #{user}</h2>
+    //- <section class="dashboard-section">
+    //-   <h2>weather data, #{user}</h2>
 
-      <div class="profile-info">
-        <h3>Your Profile</h3>
-        <p><strong>Name:</strong> #{user}</p>
-        <p><strong>Email:</strong> #{id}</p>
-      </div>
-    </section>
+    //-   <div class="profile-info">
+    //-     <h3>Your Profile</h3>
+    //-     <p><strong>Name:</strong> #{user}</p>
+    //-     <p><strong>Email:</strong> #{id}</p>
+    //-   </div>
+    //- </section>
 
-    <section class="dashboard-section">
-      <h2>Welcome to your Dashboard, #{user}</h2>
+    //- <section class="dashboard-section">
+    //-   <h2>Welcome to your Dashboard, #{user}</h2>
 
-      <div class="profile-info">
-        <h3>Your Profile</h3>
-        <p><strong>Name:</strong> #{user}</p>
-        <p><strong>Email:</strong> #{id}</p>
-      </div>
-    </section>
+    //-   <div class="profile-info">
+    //-     <h3>Your Profile</h3>
+    //-     <p><strong>Name:</strong> #{user}</p>
+    //-     <p><strong>Email:</strong> #{id}</p>
+    //-   </div>
+    //- </section>
 
     <section id="courses" class="courses-section">
       <h2>Your Courses</h2>

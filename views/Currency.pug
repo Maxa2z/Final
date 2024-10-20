@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rates</title>
+    <link rel="stylesheet" href="./assets/css/dashboard.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Exchange Rates</h1>
+        
+        <!-- Form to submit from and to currencies -->
+        <form id="exchangeRateForm" action="/Curr" method="POST">
+            <label for="fromCountry">From:</label>
+            <select id="fromCountry" name="fromCurrency">
+                <option value="USD">United States</option>
+                <option value="EUR">Germany (Euro)</option>
+                <option value="GBP">United Kingdom</option>
+                <option value="JPY">Japan</option>
+                <option value="INR">India</option>
+            </select>
+
+            <label for="toCountry">To:</label>
+            <select id="toCountry" name="toCurrency">
+                <option value="USD">United States</option>
+                <option value="EUR">Germany (Euro)</option>
+                <option value="GBP">United Kingdom</option>
+                <option value="JPY">Japan</option>
+                <option value="INR">India</option>
+            </select>
+
+            <button type="submit" class="btn-login">Check</button>
+        </form>
+
+        <div class="rate-display" id="rate-display">#{from} -> #{rate}</div>
+    </div>
+</body>
+</html>
