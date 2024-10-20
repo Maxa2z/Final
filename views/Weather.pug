@@ -1,0 +1,32 @@
+//- <!DOCTYPE html>
+//- <html lang="en">
+//- <head>
+//-     <meta charset="UTF-8">
+//-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//-     <title>Weather</title>
+//- </head>
+//- <body>
+//-     <div>
+//-         <h1>#{data.location[0]},#{data.location[1]}</h1>
+//-     </div>
+//- </body>
+//- </html>
+
+doctype html
+html
+  head
+    title Weather Forecast
+  body
+    h1 Weather Forecast for Your Location
+    if weather
+      h2 Current Weather Data
+      ul
+        li Location: #{weather.location.lat}, #{weather.location.lon}
+        //- li Temperature: #{weather.data.timelines[0].intervals[0].values.temperature} °C
+        li Condition: #{weather.timelines.daily[0].sunriseTime}
+        li Condition: #{weather.timelines.daily[0].sunsetTime}
+        li Condition: #{weather.timelines.daily[0].temperatureAvg}
+        li Condition: #{weather.timelines.daily[0].windSpeedAvg}
+        li Condition: #{weather.timelines.daily[0].humidityAvg}
+    else
+      p No weather data available for your location.

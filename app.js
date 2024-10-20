@@ -7,6 +7,7 @@ const compare = bcrypt.compare;
 const hash = bcrypt.hash;
 const saltRounds = 10;
 const mongoose = require('mongoose');
+const axios = require('axios');
 
 mongoose.connect('mongodb://127.0.0.1:27017/assignment_7');
 
@@ -41,9 +42,59 @@ app.get('/login', (req, res, next) => {
     res.render('login');
 });
 
+app.get('/Wea', (req, res, next) => {
+    res.render('Weather',{data : ""});
+});
+
+app.get('/Weather', async(req, res, next) => {
+    let api = 'mwmhIrLoVSndCqh1YfeIBm6E98cLBU0W';
+    let city = 'Guntur';
+    let lat = '16.314209';
+    let lon = '80.435028';
+    try {
+        const response = await axios.get(`https://api.tomorrow.io/v4/weather/forecast?location=${lat},${lon}&apikey=${api}`);
+        const weatherData = response.data;
+        res.render('Weather', { weather: weatherData });
+      } catch (error) {
+
+        res.status(500).send(`${error}`);
+      }
+});
+
+
+app.get('/Delete/:id', (req, res, next) => {
+    let id = req.params.id;
+    User.deleteOne({email : id},(err) => {
+        if(err){
+            console.log(err);
+            alert('User not deleted');
+        }
+        else{
+            console.log('User deleted');
+            res.render('login');
+        }
+    });
+});
 
 app.get('/register', (req, res, next) => {
     res.render('register');
+});
+
+app.get('/Currency', (req, res, next) => {
+    res.render('Currency',{rate : ""});
+});
+
+app.post('/Curr', async(req, res) => {
+    // retrive data from form
+    console.log(req.body.fromCurrency, req.body.toCurrency);
+
+    axios.get(`https://exchange-rates.abstractapi.com/v1/live/?api_key=a3c34a5dd61543ed9803137265bb1ed6&base=${req.body.fromCurrency}&target=${req.body.toCurrency}`)
+    .then((response) => {
+        res.render('Currency',{from: 1.0 ,rate : response.data.exchange_rates[req.body.toCurrency]});
+    })
+    .catch((error) => {
+        console.error("error");
+    });
 });
 
 app.post('/login_in', async(req, res) => {
