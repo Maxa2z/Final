@@ -9,7 +9,7 @@ const saltRounds = 10;
 const mongoose = require('mongoose');
 const axios = require('axios');
 
-
+// connect to database
 mongoose.connect("mongodb+srv://root:root@cluster0.13tgu.mongodb.net/final?retryWrites=true&w=majority&appName=Cluster0");
 
 const userSchema = new mongoose.Schema({
