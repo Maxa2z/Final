@@ -9,16 +9,17 @@ const saltRounds = 10;
 const mongoose = require('mongoose');
 const axios = require('axios');
 // mongodb+srv://root:<db_password>@cluster0.13tgu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-// mongoose.connect('mongodb://127.0.0.1:27017/assignment_7');
-// mongoose.connect('mongodb+srv://root:root@cluster0.13tgu.mongodb.net/assignment_7?retryWrites=true&w=majority&appName=Cluster0');
-mongoose
-  .connect(
-    "mongodb+srv://root:root@cluster0.13tgu.mongodb.net/assignment_7?retryWrites=true&w=majority&appName=Cluster0"
-    // "mongodb+srv://sendmail2dk:aZSMCZLbxWukg1DR@cluster0.7br9d.mongodb.net/air-ticket-booking-db?retryWrites=true&w=majority&appName=Cluster0"
-  )
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log("Failed to connect to MongoDB", err));
+mongoose.connect("mongodb+srv://root:root@cluster0.13tgu.mongodb.net/ass?retryWrites=true&w=majority&appName=Cluster0");
+// // mongoose.connect('mongodb://127.0.0.1:27017/assignment_7');
+// // mongoose.connect('mongodb+srv://root:root@cluster0.13tgu.mongodb.net/assignment_7?retryWrites=true&w=majority&appName=Cluster0');
+// mongoose
+//   .connect(
+//     "mongodb+srv://root:root@cluster0.13tgu.mongodb.net/assignment_7?retryWrites=true&w=majority&appName=Cluster0"
+//     // "mongodb+srv://root:root@cluster0.13tgu.mongodb.net/assignment_7?retryWrites=true&w=majority&appName=Cluster0"
+//     // "mongodb+srv://sendmail2dk:aZSMCZLbxWukg1DR@cluster0.7br9d.mongodb.net/air-ticket-booking-db?retryWrites=true&w=majority&appName=Cluster0"
+//   )
+//   .then(() => console.log("MongoDB connected"))
+//   .catch((err) => console.log("Failed to connect to MongoDB", err));
 
 const userSchema = new mongoose.Schema({
     name: String,
