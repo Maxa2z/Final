@@ -8,8 +8,10 @@ const hash = bcrypt.hash;
 const saltRounds = 10;
 const mongoose = require('mongoose');
 const axios = require('axios');
+// mongodb+srv://root:<db_password>@cluster0.13tgu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
-mongoose.connect('mongodb://127.0.0.1:27017/assignment_7');
+// mongoose.connect('mongodb://127.0.0.1:27017/assignment_7');
+mongoose.connect('mongodb+srv://root:root@cluster0.13tgu.mongodb.net/assignment_7?retryWrites=true&w=majority&appName=Cluster0');
 
 const userSchema = new mongoose.Schema({
     name: String,
